@@ -1,0 +1,26 @@
+!#bin/bash
+
+# install gnome
+sudo apt-get install gnome -y
+
+# Install spotify and pycharm
+sudo install snapd -y
+snap install spotify
+sudo snap install pycharm-community --classic
+
+# copies theme to proper
+mkdir ~/.themes
+mkdir ~/.themes/snow-alien
+cp Snow-Alien.zip ~/.themes/snow-alien
+unzip ~/.themes/snow-alien/Snow-Alien.zip
+
+# Fusuma instalation
+sudo gpasswd -a $USER input -y
+sudo apt-get install libinput-tools -y
+sudo apt-get install xdotool -y
+sudo apt-get install ruby -y
+sudo gem install fusuma
+mkdir ~/.config/fusuma/
+cp config.yml ~/.config/fusuma/config.yml
+
+printf "$(which fusuma) & disown \n" >> .profile # Adds fusuma to the startup
