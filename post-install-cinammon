@@ -1,4 +1,4 @@
-!#bin/bash
+#!/bin/bash
 
 # install gnome
 sudo apt-get install gnome -y
